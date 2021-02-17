@@ -1,0 +1,13 @@
+{
+  "name": "dmdata.jp-types",
+  "version": "1.0.0",
+  "description": "",
+  "type": "index.d.ts",
+  "scripts": {
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}
