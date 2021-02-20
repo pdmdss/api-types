@@ -24,7 +24,6 @@ export type WebSocketV2Data = {
   compression: null | 'gzip' | 'zip';
   encoding: null | 'base64';
   body: string;
-  receivedTime: string | Date;
 };
 
 export type WebSocketV2Ping = {
