@@ -8,16 +8,16 @@ export type WebSocketV1Data = {
   data: {
     type: string;
     author: string;
-    time: Date;
+    time: string | Date;
     bbb: string | null;
     test: boolean;
     xml: boolean;
     compression: null | 'gzip' | 'zip';
-    createTime: Date;
+    createTime: string | Date;
     sendNumber: number;
   };
   xmlData: XmlReport | null,
-  receivedTime: string;
+  receivedTime: string | Date;
 };
 
 

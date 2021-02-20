@@ -5,14 +5,18 @@ export type WebSocketV2Data = {
   version: '2.0';
   id: string;
   classification: string;
+  passing: {
+    name: string;
+    time: string | Date;
+  }[];
   head: {
     type: string;
     author: string;
-    time: Date;
+    time: string | Date;
     designation: string | null;
     test: boolean;
     xml: boolean;
-    createTime: Date;
+    createTime: string | Date;
     sendNumber: number;
   };
   xmlReport?: XmlReport;
@@ -20,7 +24,7 @@ export type WebSocketV2Data = {
   compression: null | 'gzip' | 'zip';
   encoding: null | 'base64';
   body: string;
-  receivedTime: string;
+  receivedTime: string | Date;
 };
 
 export type WebSocketV2Ping = {
