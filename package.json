@@ -1,5 +1,5 @@
 {
-  "name": "dmdata.jp-types",
+  "name": "@pdmdss/api-types",
   "version": "1.0.0",
   "description": "",
   "type": "index.d.ts",
