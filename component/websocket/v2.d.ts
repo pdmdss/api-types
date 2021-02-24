@@ -39,6 +39,8 @@ export type WebSocketV2Pong = {
 export type WebSocketV2Start = {
   type: 'start';
   classifications: string[];
+  dataTypes: string[] | null;
+  tags: { [key: string]: string | number | null };
   time: string;
 }
 
