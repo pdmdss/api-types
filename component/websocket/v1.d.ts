@@ -1,8 +1,9 @@
 import { XmlReport } from '../xml.report';
+import { ClassificationTelegramValues } from '../classification';
 
 export type WebSocketV1Data = {
   type: 'data';
-  classification: string;
+  classification: ClassificationTelegramValues;
   key: string;
   body: string;
   data: {
@@ -33,7 +34,7 @@ export type WebSocketV1Pong = {
 
 export type WebSocketV1Start = {
   type: 'start';
-  classification: string[];
+  classification: ClassificationTelegramValues[];
   time: string;
 }
 

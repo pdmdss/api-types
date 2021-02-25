@@ -1,10 +1,11 @@
 import { XmlReport } from '../xml.report';
+import { ClassificationTelegramValues } from '../classification';
 
 export type WebSocketV2Data = {
   type: 'data';
   version: '2.0';
   id: string;
-  classification: string;
+  classification: ClassificationTelegramValues;
   passing: {
     name: string;
     time: string | Date;
@@ -39,7 +40,7 @@ export type WebSocketV2Pong = {
 export type WebSocketV2Start = {
   type: 'start';
   websocketId: number;
-  classifications: string[];
+  classifications: ClassificationTelegramValues[];
   dataTypes: string[] | null;
   tags: { [key: string]: string | number | null };
   time: string;
@@ -47,14 +48,14 @@ export type WebSocketV2Start = {
 
 export type WebSocketV2ChangeClassification = {
   type: 'change.classification';
-  ends: string[];
-  after: string[];
+  ends: ClassificationTelegramValues[];
+  after: ClassificationTelegramValues[];
 }
 
 export type WebSocketV2Error = {
   type: 'error';
   error: string;
-  code: string;
+  code: number;
   close: boolean;
 }
 
