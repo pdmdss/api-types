@@ -17,8 +17,6 @@ export type WebSocketV2Data = {
     designation: string | null;
     test: boolean;
     xml: boolean;
-    createTime: string | Date;
-    sendNumber: number;
   };
   xmlReport?: XmlReport;
   format: null | 'xml' | 'a/n' | 'binary' | 'json';
