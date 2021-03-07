@@ -5,7 +5,7 @@ import { ClassificationValues } from '../../classification';
 
 export type APIV2TelegramListQueryParams = {
   limit?: number;
-  type?: string[];
+  type?: string;
   xmlReport?: boolean;
   test?: boolean | 'only';
   cursorToken?: string;
