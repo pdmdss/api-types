@@ -22,11 +22,9 @@ export interface APIV2TelegramListResponseOk extends APIV2Head {
       time: string;
       designation: string | null;
       test: boolean;
-      xml: boolean;
-      createTime: string;
-      sendNumber: number;
     };
     xmlReport?: XmlReport;
+    format: 'xml' | 'a/n' | 'binary' | null;
   }[];
   nextToken?: string;
   nextPooling?: string;
