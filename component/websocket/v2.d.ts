@@ -8,12 +8,12 @@ export type WebSocketV2Data = {
   classification: ClassificationValues;
   passing: {
     name: string;
-    time: string | Date;
+    time: string;
   }[];
   head: {
     type: string;
     author: string;
-    time: string | Date;
+    time: string;
     designation: string | null;
     test: boolean;
     xml: boolean;

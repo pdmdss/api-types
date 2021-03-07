@@ -9,12 +9,12 @@ export type WebSocketV1Data = {
   data: {
     type: string;
     author: string;
-    time: string | Date;
+    time: string;
     bbb: string | null;
     test: boolean;
     xml: boolean;
     compression: null | 'gzip' | 'zip';
-    createTime: string | Date;
+    createTime: string;
     sendNumber: number;
   };
   xmlData: XmlReport | null,
