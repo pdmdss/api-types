@@ -5,9 +5,9 @@ import { ClassificationValues } from '../../classification';
 
 export type APIV2TelegramListQueryParams = {
   limit?: number;
-  type?: string;
-  xmlReport?: boolean;
-  test?: 'true' | 'false' | 'only';
+  type?: string | string[];
+  xmlReport?: 'on' | 'off';
+  test?: 'including' | 'no' | 'only';
   cursorToken?: string;
 }
 
