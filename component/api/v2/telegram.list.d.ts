@@ -1,5 +1,5 @@
 import { APIV2Head } from './head';
-import { APIV2BaseError, APIV2Error } from './error';
+import { APIV2BaseError } from './error';
 import { XmlReport } from '../../xml.report';
 import { ClassificationValues } from '../../classification';
 
@@ -7,7 +7,7 @@ export type APIV2TelegramListQueryParams = {
   limit?: number;
   type?: string;
   xmlReport?: boolean;
-  test?: boolean | 'only';
+  test?: 'true' | 'false' | 'only';
   cursorToken?: string;
 }
 
