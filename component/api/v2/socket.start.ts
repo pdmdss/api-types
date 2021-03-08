@@ -15,12 +15,13 @@ export interface APIV2SocketStartResponseOk extends APIV2Head {
   status: 'ok';
   ticket: string;
   websocket: {
-    id: string;
+    id: number;
     url: string;
     protocol: ['jma.telegram'];
     expiration: number;
   }
   classifications: ClassificationValues[];
+  test: 'including' | 'no';
   dataTypes: string[] | null;
   tags: { [key: string]: string | number | null };
 };
