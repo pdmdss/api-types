@@ -25,6 +25,7 @@ export interface APIV2TelegramListResponseOk extends APIV2Head {
     };
     xmlReport?: XmlReport;
     format: 'xml' | 'a/n' | 'binary' | null;
+    url: string;
   }[];
   nextToken?: string;
   nextPooling?: string;
