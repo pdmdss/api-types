@@ -6,7 +6,7 @@ export type APIV2SocketStartQueryParams = {};
 
 export type APIV2SocketStartRequestBodyJSON = {
   classifications: ClassificationValues[],
-  dataTypes?: string[];
+  types?: string[];
   test?: 'including' | 'no';
   tags?: { [key: string]: string | number | null };
 };
