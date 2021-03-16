@@ -20,6 +20,7 @@ export interface APIV2SocketListResponseOk extends APIV2Head {
     start: Date;
     end: Date | null;
     ping: Date | null;
+    ipAddress: string;
     server: string | null;
     tags: { [key: string]: string | number | null };
     status: 'waiting' | 'open' | 'closed';
