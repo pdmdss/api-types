@@ -41,7 +41,7 @@ export type WebSocketV2Start = {
   classifications: ClassificationValues[];
   types: string[] | null;
   test: 'including' | 'no';
-  formats: ['xml', 'a/n', 'binary'] | ['json'];
+  formats: ('xml' | 'a/n' | 'binary' | 'json')[];
   tags: { [key: string]: string | number | null };
   time: string;
 }
