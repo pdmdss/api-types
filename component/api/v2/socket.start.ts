@@ -24,6 +24,7 @@ export interface APIV2SocketStartResponseOk extends APIV2Head {
   classifications: ClassificationValues[];
   test: 'including' | 'no';
   dataTypes: string[] | null;
+  formats: ('xml' | 'a/n' | 'binary' | 'json')[];
   tags: { [key: string]: string | number | null };
 };
 
