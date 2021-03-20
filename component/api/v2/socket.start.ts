@@ -9,6 +9,7 @@ export type APIV2SocketStartRequestBodyJSON = {
   types?: string[];
   test?: 'including' | 'no';
   tags?: { [key: string]: string | number | null };
+  formatMode?: 'raw';
 };
 
 export interface APIV2SocketStartResponseOk extends APIV2Head {
