@@ -1,11 +1,16 @@
 import { APIV2BaseError, APIV2Error } from './error';
 
-export type APIV2SocketCloseQueryParams = {
-  id: string;
-};
+export namespace APIV2SocketClose {
+  export type Method = 'DELETE';
 
-export interface APIV2SocketCloseResponseOk {}
+  export type QueryParams = {
+    id: string;
+  };
 
-export type APIV2SocketCloseResponseError = APIV2BaseError | APIV2Error<string, 404>;
+  export interface ResponseOk {
+  }
 
-export type APIV2SocketCloseResponse = APIV2SocketCloseResponseOk | APIV2SocketCloseResponseError;
+  export type ResponseError = APIV2BaseError | APIV2Error<string, 404>;
+
+  export type Response = ResponseOk | ResponseError;
+}
