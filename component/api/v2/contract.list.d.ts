@@ -1,6 +1,5 @@
 import { APIV2Head } from './head';
 import { APIV2BaseError, APIV2Error } from './error';
-import { ClassificationValues } from '../../classification';
 
 
 export namespace APIV2ContractList {
@@ -12,14 +11,15 @@ export namespace APIV2ContractList {
     status: 'ok';
     items: {
       id: number | null;
-      classification: ClassificationValues;
-      name: string;
+      classification: string;
+      classificationName: string;
       price: {
         day: number;
-        max: number;
+        month: number;
       };
       start: Date | null;
       isValid: boolean;
+      connectionCounts: string;
     }[];
   }
 

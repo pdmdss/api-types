@@ -18,7 +18,7 @@ export type WebSocketV1Data = {
     sendNumber: number;
   };
   xmlData: XmlReport | null,
-  receivedTime: string | Date;
+  receivedTime: string;
 };
 
 

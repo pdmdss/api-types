@@ -13,13 +13,18 @@ export type WebSocketV2Data = {
   head: {
     type: string;
     author: string;
+    target?: string;
     time: string;
     designation: string | null;
     test: boolean;
-    xml: boolean;
+    xml?: boolean;
   };
   xmlReport?: XmlReport;
   format: null | 'xml' | 'a/n' | 'binary' | 'json';
+  schema?: {
+    type: string;
+    version: string;
+  };
   compression: null | 'gzip' | 'zip';
   encoding: null | 'base64';
   body: string;
