@@ -26,7 +26,7 @@ export type WebSocketV2Data = {
     version: string;
   };
   compression: null | 'gzip' | 'zip';
-  encoding: null | 'base64';
+  encoding: null | 'base64' | 'utf-8';
   body: string;
 };
 
