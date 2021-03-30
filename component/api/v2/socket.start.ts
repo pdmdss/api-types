@@ -22,12 +22,12 @@ export namespace APIV2SocketStart {
     websocket: {
       id: number;
       url: string;
-      protocol: ['jma.telegram'];
+      protocol: ['dmdata.v2'];
       expiration: number;
     }
     classifications: ClassificationValues[];
     test: 'including' | 'no';
-    dataTypes: string[] | null;
+    types: string[] | null;
     formats: ('xml' | 'a/n' | 'binary' | 'json')[];
     tags: { [key: string]: string | number | null };
   };
