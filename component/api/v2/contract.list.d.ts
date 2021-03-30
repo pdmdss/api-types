@@ -17,7 +17,7 @@ export namespace APIV2ContractList {
         day: number;
         month: number;
       };
-      start: Date | null;
+      start: string | null;
       isValid: boolean;
       connectionCounts: number;
     }[];

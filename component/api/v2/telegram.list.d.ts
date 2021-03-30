@@ -23,11 +23,11 @@ export namespace APIV2TelegramList {
       head: {
         type: string;
         author: string;
-        time: Date;
+        time: string;
         designation: string | null;
         test: boolean;
       };
-      receivedTime: Date;
+      receivedTime: string;
       xmlReport?: XmlReport;
       format: 'xml' | 'a/n' | 'binary' | null;
       url: string;

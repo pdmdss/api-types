@@ -20,10 +20,10 @@ export namespace APIV2SocketList {
       classifications: ClassificationValues[];
       test: 'including' | 'no';
       types: string[] | null;
-      start: Date;
-      end: Date | null;
-      ping: Date | null;
-      ipAddress: string;
+      start: string;
+      end: string | null;
+      ping: string | null;
+      ipAddress: string | null;
       server: string | null;
       tags: { [key: string]: string | number | null };
       status: 'waiting' | 'open' | 'closed';
