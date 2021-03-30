@@ -15,7 +15,7 @@ export namespace APIV2ApiKeyList {
       name: string | null;
       key: string;
       createTime: string;
-      scope: string[];
+      scopes: string[];
       allowed: {
         ipAddress: string[];
         originDomain: string[];

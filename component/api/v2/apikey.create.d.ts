@@ -13,7 +13,7 @@ export namespace APIV2ApiKeyCreate {
       name: null;
       key: string;
       createTime: string;
-      scope: [];
+      scopes: [];
       allowed: {
         ipAddress: [];
         originDomain: [];
