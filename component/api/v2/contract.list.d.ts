@@ -19,7 +19,7 @@ export namespace APIV2ContractList {
       };
       start: Date | null;
       isValid: boolean;
-      connectionCounts: string;
+      connectionCounts: number;
     }[];
   }
 
