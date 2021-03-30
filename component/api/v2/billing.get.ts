@@ -29,7 +29,7 @@ export namespace APIV2BillingGet {
       };
     }
     payment?: {
-      status: 'pending' | 'paid' | 'partialFailure' | 'failed';
+      status: 'pending' | 'paid' | 'partialFailure' | 'failure';
       items: {
         id: number;
         time: string;
