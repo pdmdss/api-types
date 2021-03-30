@@ -13,3 +13,5 @@ export * from './telegram.list';
 export * from './billing.get';
 
 export * from './account.get';
+
+export * from './scope.list';
