@@ -11,3 +11,5 @@ export * from './socket.close';
 export * from './telegram.list';
 
 export * from './billing.get';
+
+export * from './account.get';
