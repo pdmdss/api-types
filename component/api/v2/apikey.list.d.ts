@@ -4,7 +4,9 @@ import { APIV2BaseError } from './error';
 export namespace APIV2ApiKeyList {
   export type Method = 'GET';
 
-  export type QueryParams = {};
+  export type QueryParams = {
+    id?: string;
+  };
 
   export interface ResponseOk extends APIV2Head {
     status: 'ok';
@@ -13,6 +15,11 @@ export namespace APIV2ApiKeyList {
       name: string | null;
       key: string;
       createTime: string;
+      scope: string[];
+      allowed: {
+        ipAddress: string[];
+        originDomain: string[];
+      };
     }[];
   }
 
