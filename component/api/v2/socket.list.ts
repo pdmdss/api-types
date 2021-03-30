@@ -19,7 +19,7 @@ export namespace APIV2SocketList {
       ticket: string | null;
       classifications: ClassificationValues[];
       test: 'including' | 'no';
-      dataTypes: string[] | null;
+      types: string[] | null;
       start: Date;
       end: Date | null;
       ping: Date | null;
