@@ -8,26 +8,24 @@ export namespace APIV2BillingGet {
 
   export interface ResponseOk extends APIV2Head {
     status: 'ok';
-    billing: {
-      targetDate: string;
-      items: {
-        classification: string;
-        classificationName: string;
-        targetTime: {
-          start: string;
-          end: string | null;
-        }[];
-        amount: {
-          subtotal: number;
-        };
+    targetDate: string;
+    items: {
+      classification: string;
+      classificationName: string;
+      targetTime: {
+        start: string;
+        end: string | null;
       }[];
       amount: {
-        total: number;
-        discount: number;
-        payment: number;
+        subtotal: number;
       };
-      status?: 'paid' | 'unpaid' | 'error'
+    }[];
+    amount: {
+      total: number;
+      discount: number;
+      payment: number;
     };
+    paymentStatus?: 'paid' | 'unpaid' | 'error';
   }
 
   export type ResponseError = APIV2BaseError;
