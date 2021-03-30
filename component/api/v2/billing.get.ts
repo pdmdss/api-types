@@ -10,6 +10,7 @@ export namespace APIV2BillingGet {
     status: 'ok';
     targetDate: string;
     billing: {
+      id?: number;
       items: {
         classification: string;
         classificationName: string;
@@ -28,7 +29,7 @@ export namespace APIV2BillingGet {
       };
     }
     payment?: {
-      status: 'paid' | 'unpaid' | 'failed' | 'partialFailure';
+      status: 'pending' | 'paid' | 'partialFailure' | 'failed';
       items: {
         id: number;
         time: string;
