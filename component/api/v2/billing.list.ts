@@ -4,7 +4,10 @@ import { APIV2BaseError } from './error';
 export namespace APIV2BillingList {
   export type Method = 'GET';
 
-  export type QueryParams = {};
+  export type QueryParams = {
+    limit?: number;
+    cursorToken?: string;
+  };
 
   export interface ResponseOk extends APIV2Head {
     status: 'ok';
@@ -15,6 +18,7 @@ export namespace APIV2BillingList {
         end: string;
       };
     }[];
+    nextToken?: string;
   }
 
   export type ResponseError = APIV2BaseError;
