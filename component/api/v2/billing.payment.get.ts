@@ -8,7 +8,6 @@ export namespace APIV2BillingPaymentGet {
 
   export interface ResponseOk extends APIV2Head {
     status: 'ok';
-    targetDate: string;
     paymentStatus: 'pending' | 'paid' | 'partialFailure' | 'failure';
     billingId: number;
     items: {

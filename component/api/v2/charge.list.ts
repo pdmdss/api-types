@@ -22,7 +22,8 @@ export namespace APIV2ChargeList {
     }[];
     amount: {
       total: number;
-    }
+    };
+    nextToken?: string;
   }
 
   export type ResponseError = APIV2BaseError;

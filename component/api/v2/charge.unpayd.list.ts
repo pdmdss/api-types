@@ -21,6 +21,7 @@ export namespace APIV2ChargeUnpaidList {
       type: 'convenience' | 'bank';
       url: string;
     }[];
+    nextToken?: string;
   }
 
   export type ResponseError = APIV2BaseError;
