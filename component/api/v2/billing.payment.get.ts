@@ -1,7 +1,7 @@
 import { APIV2Head } from './head';
 import { APIV2BaseError } from './error';
 
-export namespace APIV2BillingGet {
+export namespace APIV2BillingPaymentGet {
   export type Method = 'GET';
 
   export type QueryParams = {};

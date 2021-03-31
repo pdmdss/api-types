@@ -6,6 +6,9 @@ export * from './apikey.delete'
 export * from './apikey.list'
 export * from './apikey.update'
 
+export * from './charge.list';
+export * from './charge.unpayd.list';
+
 export * from './contract.change';
 export * from './contract.list';
 
@@ -17,6 +20,7 @@ export * from './telegram.list';
 
 export * from './billing.list';
 export * from './billing.get';
+export * from './billing.payment.get';
 
 export * from './account.get';
 
