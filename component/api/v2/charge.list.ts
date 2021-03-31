@@ -1,31 +1,28 @@
 import { APIV2Head } from './head';
 import { APIV2BaseError } from './error';
 
-export namespace APIV2BillingGet {
+export namespace APIV2ChargeList {
   export type Method = 'GET';
 
-  export type QueryParams = {};
+  export type QueryParams = {
+    limit?: number;
+    cursorToken?: string;
+  };
 
   export interface ResponseOk extends APIV2Head {
     status: 'ok';
-    targetDate: string;
-    billingId?: number;
     items: {
-      classification: string;
-      classificationName: string;
-      targetTime: {
-        start: string;
-        end: string | null;
-      }[];
+      id: number;
       amount: {
-        subtotal: number;
+        balance: number;
+        issued: number;
       };
+      expirationTime: string;
+      issueTime: string;
     }[];
     amount: {
       total: number;
-      discount: number;
-      payment: number;
-    };
+    }
   }
 
   export type ResponseError = APIV2BaseError;

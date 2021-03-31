@@ -9,22 +9,20 @@ export namespace APIV2BillingGet {
   export interface ResponseOk extends APIV2Head {
     status: 'ok';
     targetDate: string;
-    billingId?: number;
+    paymentStatus: 'pending' | 'paid' | 'partialFailure' | 'failure';
+    billingId: number;
     items: {
-      classification: string;
-      classificationName: string;
-      targetTime: {
-        start: string;
-        end: string | null;
-      }[];
+      id: number;
+      time: string;
       amount: {
-        subtotal: number;
-      };
+        paid: number;
+      }
+      type: 'card' | 'charge';
     }[];
     amount: {
       total: number;
-      discount: number;
-      payment: number;
+      paid: number;
+      unpaid: number;
     };
   }
 
