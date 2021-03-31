@@ -10,8 +10,8 @@ export namespace APIV2ApiKeyUpdate {
     name?: string | null;
     scope?: string[];
     allowed?: {
-      ipAddress?: string[];
-      originDomain?: string[];
+      ipAddresses?: string[];
+      originDomains?: string[];
     };
   };
 
