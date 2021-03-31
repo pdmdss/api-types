@@ -12,7 +12,7 @@ export namespace APIV2SocketStart {
     classifications: ClassificationValues[],
     types?: string[];
     test?: 'including' | 'no';
-    tags?: { [key: string]: string | number | null };
+    appName?: string;
     formatMode?: 'raw';
   };
 
@@ -29,7 +29,7 @@ export namespace APIV2SocketStart {
     test: 'including' | 'no';
     types: string[] | null;
     formats: ('xml' | 'a/n' | 'binary' | 'json')[];
-    tags: { [key: string]: string | number | null };
+    appName: string | null;
   };
 
   export type ResponseError =

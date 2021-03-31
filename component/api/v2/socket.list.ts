@@ -25,7 +25,7 @@ export namespace APIV2SocketList {
       ping: string | null;
       ipAddress: string | null;
       server: string | null;
-      tags: { [key: string]: string | number | null };
+      appName: string | null;
       status: 'waiting' | 'open' | 'closed';
     }[];
     nextToken?: string;
