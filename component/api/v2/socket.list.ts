@@ -7,7 +7,7 @@ export namespace APIV2SocketList {
 
   export type QueryParams = {
     id?: string;
-    status?: string;
+    status?: 'waiting' | 'open' | 'closed';
     cursorToken?: string;
     limit?: number;
   };

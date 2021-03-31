@@ -8,7 +8,7 @@ export namespace APIV2ApiKeyUpdate {
 
   export type RequestBodyJSON = {
     name?: string | null;
-    scope?: string[];
+    scopes?: string[];
     allowed?: {
       ipAddresses?: string[];
       originDomains?: string[];

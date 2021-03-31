@@ -21,6 +21,9 @@ export namespace APIV2ChargeUnpaidList {
       type: 'convenience' | 'bank';
       url: string;
     }[];
+    amount: {
+      total: number;
+    };
     nextToken?: string;
   }
 
