@@ -47,7 +47,7 @@ export type WebSocketV2Start = {
   types: string[] | null;
   test: 'including' | 'no';
   formats: ('xml' | 'a/n' | 'binary' | 'json')[];
-  tags: { [key: string]: string | number | null };
+  appName: string | null;
   time: string;
 }
 
