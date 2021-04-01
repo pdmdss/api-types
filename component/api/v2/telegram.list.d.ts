@@ -11,6 +11,7 @@ export namespace APIV2TelegramList {
     type?: string | string[];
     xmlReport?: 'true' | 'false';
     test?: 'including' | 'no' | 'only';
+    formatMode?: 'raw';
     cursorToken?: string;
   }
 
@@ -29,7 +30,7 @@ export namespace APIV2TelegramList {
       };
       receivedTime: string;
       xmlReport?: XmlReport;
-      format: 'xml' | 'a/n' | 'binary' | null;
+      format: 'xml' | 'a/n' | 'binary' | 'json';
       url: string;
     }[];
     nextToken?: string;
