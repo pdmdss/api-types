@@ -6,6 +6,10 @@ export type WebSocketV2Data = {
   version: '2.0';
   id: string;
   classification: ClassificationValues;
+  destinations?: {
+    sender: 'ires' | 'receive' | 'websocket' | 'jsonization';
+    address: 'ires' | 'websocket' | 'jsonization';
+  }[];
   passing: {
     name: string;
     time: string;
