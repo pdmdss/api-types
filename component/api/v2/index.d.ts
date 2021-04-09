@@ -1,10 +1,10 @@
 export * from './head';
 export * from './error';
 
-export * from './apikey.create'
-export * from './apikey.delete'
-export * from './apikey.list'
-export * from './apikey.update'
+export * from './apikey.create';
+export * from './apikey.delete';
+export * from './apikey.list';
+export * from './apikey.update';
 
 export * from './charge.list';
 export * from './charge.unpayd.list';
@@ -25,3 +25,8 @@ export * from './billing.payment.get';
 export * from './account.get';
 
 export * from './scope.list';
+
+export * from './oauthclient.create';
+export * from './oauthclient.update';
+export * from './oauthclient.list';
+export * from './oauthclient.delete';
