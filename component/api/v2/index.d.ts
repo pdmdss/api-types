@@ -29,4 +29,5 @@ export * from './scope.list';
 export * from './oauthclient.create';
 export * from './oauthclient.update';
 export * from './oauthclient.list';
+export * from './oauthclient.get';
 export * from './oauthclient.delete';
