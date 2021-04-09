@@ -11,6 +11,7 @@ export namespace APIV2OAuthClientList {
     items: {
       id: number;
       client: {
+        id: string;
         type: 'confidential' | 'public';
         name: string;
       };
