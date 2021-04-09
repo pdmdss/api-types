@@ -30,7 +30,7 @@ export namespace APIV2TelegramList {
       };
       receivedTime: string;
       xmlReport?: XmlReport;
-      format: 'xml' | 'a/n' | 'binary' | 'json';
+      format: 'xml' | 'a/n' | 'binary' | 'json' | null;
       url: string;
     }[];
     nextToken?: string;
