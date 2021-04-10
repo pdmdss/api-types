@@ -8,16 +8,14 @@ export namespace APIV2ApiKeyCreate {
 
   export interface ResponseOk extends APIV2Head {
     status: 'ok',
-    apikey: {
-      id: number;
-      name: null;
-      key: string;
-      createTime: string;
-      scopes: [];
-      allowed: {
-        ipAddresses: [];
-        originDomains: [];
-      };
+    id: number;
+    name: null;
+    key: string;
+    createTime: string;
+    scopes: [];
+    allowed: {
+      ipAddresses: [];
+      originDomains: [];
     };
   }
 

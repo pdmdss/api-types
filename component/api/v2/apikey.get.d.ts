@@ -8,12 +8,15 @@ export namespace APIV2ApiKeyList {
 
   export interface ResponseOk extends APIV2Head {
     status: 'ok';
-    items: {
-      id: number;
-      name: string | null;
-      key: string;
-      createTime: string;
-    }[];
+    id: number;
+    name: string | null;
+    key: string;
+    createTime: string;
+    scopes: string[];
+    allowed: {
+      ipAddresses: string[];
+      originDomains: string[];
+    };
   }
 
   export type ResponseError = APIV2BaseError;
