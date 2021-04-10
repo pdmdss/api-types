@@ -1,7 +1,7 @@
 import { APIV2Head } from './head';
 import { APIV2BaseError } from './error';
 
-export namespace APIV2ApiKeyList {
+export namespace APIV2ApiKeyGet {
   export type Method = 'GET';
 
   export type QueryParams = {};

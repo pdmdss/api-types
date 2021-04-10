@@ -3,6 +3,7 @@ export * from './error';
 
 export * from './apikey.create';
 export * from './apikey.delete';
+export * from './apikey.get';
 export * from './apikey.list';
 export * from './apikey.update';
 
