@@ -32,3 +32,6 @@ export * from './oauthclient.update';
 export * from './oauthclient.list';
 export * from './oauthclient.get';
 export * from './oauthclient.delete';
+
+export * from './oauthclient.approved.list';
+export * from './oauthclient.approved.delete';
