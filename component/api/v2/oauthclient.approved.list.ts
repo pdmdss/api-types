@@ -11,17 +11,15 @@ export namespace APIV2OAuthClientApprovedList {
     items: {
       id: number;
       client: {
-        id: string;
+        id: number;
         name: string;
         logo: string | null;
         site: string;
         contacts: string[];
       };
       scopes: string[];
-      authorizationTimes: {
-        create: string;
-        last: string;
-      };
+      startTime: string;
+      lastTime: string;
       ipAddress: string;
     }[];
   }
