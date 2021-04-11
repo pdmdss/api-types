@@ -13,6 +13,8 @@ export namespace APIV2OAuthClientApprovedList {
       client: {
         id: string;
         name: string;
+        logo: string | null;
+        site: string;
         contacts: string[];
       };
       scopes: string[];
