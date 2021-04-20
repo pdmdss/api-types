@@ -6,7 +6,7 @@ export namespace APIV2OAuthClientCreate {
 
   export type QueryParams = {};
 
-  export interface ResponseOk extends APIV2Head{
+  export interface ResponseOk extends APIV2Head {
     status: 'ok',
     id: number;
     client: {
@@ -20,6 +20,7 @@ export namespace APIV2OAuthClientCreate {
     allowed: {
       responseTypes: ('code' | 'token')[];
       grantTypes: ('authorization_code' | 'refresh_token' | 'client_credentials')[];
+      scopes: string[];
     };
     site: {
       homePageUri: string;
