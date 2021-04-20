@@ -16,6 +16,7 @@ export namespace APIV2OAuthClientUpdate {
     allowed: {
       responseTypes: ('code' | 'token')[];
       grantTypes: ('authorization_code' | 'refresh_token' | 'client_credentials')[];
+      scopes: string[];
     };
     site: {
       homePageUri: string;
