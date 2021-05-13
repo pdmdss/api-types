@@ -16,6 +16,11 @@ export namespace APIV2BillingList {
       target: {
         start: string;
         end: string;
+      }
+      status: 'pending' | 'paid' | 'partialFailure' | 'failure';
+      amount: {
+        total: number;
+        unpaid: number;
       };
     }[];
     nextToken?: string;

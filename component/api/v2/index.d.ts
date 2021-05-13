@@ -3,10 +3,6 @@ export * from './error';
 
 export * from './account.get';
 
-export * from './account.notice.get';
-export * from './account.notice.list';
-export * from './account.notice.read';
-
 export * from './apikey.create';
 export * from './apikey.delete';
 export * from './apikey.get';
@@ -27,7 +23,7 @@ export * from './telegram.list';
 
 export * from './billing.list';
 export * from './billing.get';
-export * from './billing.payment.get';
+export * from './billing.payment';
 
 export * from './scope.list';
 
