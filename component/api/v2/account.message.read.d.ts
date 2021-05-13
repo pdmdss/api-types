@@ -1,6 +1,6 @@
 import { APIV2BaseError } from './error';
 
-export namespace APIV2AccountNoticeRead {
+export namespace APIV2AccountMessageRead {
   export type Method = 'PUT';
 
   export type QueryParams = {};

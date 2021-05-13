@@ -1,20 +1,23 @@
 import { APIV2Head } from './head';
 import { APIV2BaseError } from './error';
 
-export namespace APIV2AccountNoticeGet {
+export namespace APIV2BillingPaymentGet {
   export type Method = 'GET';
 
   export type QueryParams = {};
 
   export interface ResponseOk extends APIV2Head {
     status: 'ok';
-    notice: {
-      id: number;
-      title: string;
-      time: string;
-      isAlreadyRead: boolean;
-      test: string;
-    };
+    billingId: number;
+    items: {
+      billingId: number;
+      status: 'pending' | 'paid' | 'partialFailure' | 'failure';
+      amount: {
+        total: number;
+        paid: number;
+        unpaid: number;
+      };
+    }[];
   }
 
   export type ResponseError = APIV2BaseError;

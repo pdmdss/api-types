@@ -1,7 +1,7 @@
 import { APIV2Head } from './head';
 import { APIV2BaseError } from './error';
 
-export namespace APIV2AccountNoticeList {
+export namespace APIV2AccountMessageList {
   export type Method = 'GET';
 
   export type QueryParams = {};
@@ -12,6 +12,7 @@ export namespace APIV2AccountNoticeList {
       id: number;
       title: string;
       time: string;
+      importance: 'important' | 'normal';
       isAlreadyRead: boolean;
     }[];
   }
