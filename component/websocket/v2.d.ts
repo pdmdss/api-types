@@ -5,6 +5,7 @@ export type WebSocketV2Data = {
   type: 'data';
   version: '2.0';
   id: string;
+  originalId?: string;
   classification: ClassificationValues;
   destinations?: {
     sender: 'ires' | 'receive' | 'websocket' | 'jsonization';

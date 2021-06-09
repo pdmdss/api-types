@@ -19,6 +19,7 @@ export namespace APIV2TelegramList {
     status: 'ok';
     items: {
       id: string;
+      originalId?: string;
       serial: number;
       classification: ClassificationValues;
       head: {
