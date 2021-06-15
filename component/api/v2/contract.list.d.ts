@@ -12,8 +12,7 @@ export namespace APIV2ContractList {
     items: {
       id: number | null;
       planId: number;
-      classification: string;
-      classificationName: string;
+      planName: string;
       price: {
         day: number;
         month: number;
