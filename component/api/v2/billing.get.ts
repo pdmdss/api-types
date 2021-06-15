@@ -11,8 +11,8 @@ export namespace APIV2BillingGet {
     targetDate: string;
     billingId?: number;
     items: {
-      classification: string;
-      classificationName: string;
+      planId: number;
+      planName: string;
       targetTime: {
         start: string;
         end: string | null;
