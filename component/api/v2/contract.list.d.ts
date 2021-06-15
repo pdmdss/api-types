@@ -11,6 +11,7 @@ export namespace APIV2ContractList {
     status: 'ok';
     items: {
       id: number | null;
+      planId: number;
       classification: string;
       classificationName: string;
       price: {

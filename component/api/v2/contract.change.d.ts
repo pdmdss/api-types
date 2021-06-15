@@ -1,6 +1,5 @@
 import { APIV2Head } from './head';
 import { APIV2BaseError, APIV2Error } from './error';
-import { ClassificationValues } from '../../classification';
 
 export namespace APIV2ContractChange {
   export type Method = 'POST';
@@ -9,7 +8,7 @@ export namespace APIV2ContractChange {
   export type QueryParams = {}
 
   export type RequestBody = {
-    classification: ClassificationValues;
+    planId: number;
     mode: 'start' | 'end';
   };
 
