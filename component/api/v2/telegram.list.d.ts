@@ -32,7 +32,7 @@ export namespace APIV2TelegramList {
       receivedTime: string;
       xmlReport?: XmlReport;
       format: 'xml' | 'a/n' | 'binary' | 'json' | null;
-      schema: {
+      schema?: {
         type: string;
         version: string;
       };
