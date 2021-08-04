@@ -48,16 +48,6 @@ export namespace APIV2EarthquakeList {
           code: string;
           name: string;
         };
-        auxiliary?: {
-          text: string;
-          code: string;
-          name: string;
-          direction: string;
-          distance: {
-            unit: 'km';
-            value: string;
-          };
-        };
       };
       magnitude?: {
         type: 'マグニチュード';

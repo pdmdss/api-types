@@ -44,16 +44,6 @@ export namespace APIV2EarthquakeEvent {
           code: string;
           name: string;
         };
-        auxiliary?: {
-          text: string;
-          code: string;
-          name: string;
-          direction: string;
-          distance: {
-            unit: 'km';
-            value: string;
-          };
-        };
       };
       magnitude?: {
         type: 'マグニチュード';
