@@ -11,6 +11,7 @@ export namespace APIV2EarthquakeEvent {
   export interface ResponseOk extends APIV2Head {
     status: 'ok';
     event: {
+      id: number;
       eventId: string;
       originTime?: string;
       arrivalTime: string;
