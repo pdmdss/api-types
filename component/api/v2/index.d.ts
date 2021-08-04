@@ -35,3 +35,6 @@ export * from './oauthclient.delete';
 
 export * from './oauthclient.approved.list';
 export * from './oauthclient.approved.delete';
+
+export * from './earthquake.list';
+export * from './earthquake.event';
