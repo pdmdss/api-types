@@ -58,6 +58,9 @@ export namespace APIV2EarthquakeList {
       };
       maxInt: string | null;
     }[];
+    nextToken?: string;
+    nextPooling?: string;
+    nextPoolingInterval?: number;
   }
 
   export type ResponseError = APIV2BaseError;
