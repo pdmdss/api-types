@@ -45,6 +45,7 @@ export namespace APIV2EarthquakeEvent {
           code: string;
           name: string;
         };
+        source?: string;
       };
       magnitude?: {
         type: 'マグニチュード';
