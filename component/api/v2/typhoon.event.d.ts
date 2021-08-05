@@ -24,7 +24,7 @@ interface Axis {
   };
 }
 
-export namespace APIV2TyphoonEvent {
+export namespace APIV2WeatherTyphoonEvent {
   export type Method = 'GET';
 
   export type QueryParams = {

@@ -1,7 +1,7 @@
 import { APIV2Head } from './head';
 import { APIV2BaseError } from './error';
 
-export namespace APIV2TyphoonList {
+export namespace APIV2WeatherTyphoonList {
   export type Method = 'GET';
 
   export type QueryParams = {
