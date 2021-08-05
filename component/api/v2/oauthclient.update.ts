@@ -8,7 +8,6 @@ export namespace APIV2OAuthClientUpdate {
 
   export type RequestBodyJSON = {
     client: {
-      type: 'confidential' | 'public';
       name: string;
       logo: string | null;
     }

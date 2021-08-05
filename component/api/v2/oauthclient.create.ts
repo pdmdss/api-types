@@ -6,12 +6,18 @@ export namespace APIV2OAuthClientCreate {
 
   export type QueryParams = {};
 
+  export type RequestBodyJSON = {
+    client: {
+      type: 'confidential' | 'public';
+    };
+  };
+
   export interface ResponseOk extends APIV2Head {
     status: 'ok',
     id: number;
     client: {
       id: string;
-      secret: string;
+      secret: string | null;
       type: 'confidential' | 'public';
       name: string;
       logo: string | null;

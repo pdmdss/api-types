@@ -11,7 +11,6 @@ export namespace APIV2OAuthClientGet {
     id: number;
     client: {
       id: string;
-      secret: string;
       type: 'confidential' | 'public';
       name: string;
       logo: string | null;
