@@ -8,7 +8,7 @@ export namespace APIV2EarthquakeList {
     limit?: number;
     cursorToken?: string;
     hypocenterCode?: string;
-    maxIntTo?: string;
+    maxInt?: string;
     date?: string;
   };
 
