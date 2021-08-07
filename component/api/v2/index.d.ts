@@ -39,6 +39,6 @@ export * from './oauthclient.approved.delete';
 export * from './gd.earthquake.list';
 export * from './gd.earthquake.event';
 
-export * from './gd.typhoon.event';
+export * from './gd.typhoon.list';
 export * from './gd.typhoon.event';
 
