@@ -1,16 +1,20 @@
 import { APIV2Head } from './head';
-import { APIV2BaseError, APIV2Error } from './error';
-import { XmlReport } from '../../xml.report';
-import { ClassificationValues } from '../../classification';
+import { APIV2BaseError } from './error';
 
-export namespace APIV2EarthquakeEvent {
+export namespace APIV2GDEarthquakeList {
   export type Method = 'GET';
 
-  export type QueryParams = {};
+  export type QueryParams = {
+    limit?: number;
+    cursorToken?: string;
+    hypocenter?: string;
+    maxInt?: string;
+    date?: string;
+  };
 
   export interface ResponseOk extends APIV2Head {
     status: 'ok';
-    event: {
+    items: {
       id: number;
       eventId: string;
       originTime?: string;
@@ -54,31 +58,13 @@ export namespace APIV2EarthquakeEvent {
         condition?: string;
       };
       maxInt: string | null;
-      telegrams: {
-        id: string;
-        originalId: string;
-        serial: number;
-        classification: ClassificationValues;
-        head: {
-          type: 'VXSE51' | 'VXSE52' | 'VXSE53' | 'VXSE61';
-          author: string;
-          time: string;
-          designation: string | null;
-          test: boolean;
-        };
-        receivedTime: string;
-        xmlReport: XmlReport;
-        format: 'json'
-        schema: {
-          type: string;
-          version: string;
-        };
-        url: string;
-      }[];
-    };
+    }[];
+    nextToken?: string;
+    nextPooling?: string;
+    nextPoolingInterval?: number;
   }
 
-  export type ResponseError = APIV2BaseError | APIV2Error<string, 404>;
+  export type ResponseError = APIV2BaseError;
 
   export type Response = ResponseOk | ResponseError;
 }
