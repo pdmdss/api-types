@@ -60,7 +60,7 @@ export namespace APIV2GDEarthquakeEvent {
         serial: number;
         classification: ClassificationValues;
         head: {
-          type: 'VXSE51' | 'VXSE52' | 'VXSE53' | 'VXSE61';
+          type: string;
           author: string;
           time: string;
           designation: string | null;
