@@ -48,7 +48,7 @@ export namespace APIV2GDWeatherTyphoonEvent {
       classification?: {
         category: string;
         name: string;
-        areaClass?: string | null;
+        area?: string | null;
         intensity?: string | null;
       };
       center?: {
