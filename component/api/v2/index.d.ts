@@ -1,44 +1,44 @@
 export * from './head';
 export * from './error';
 
-export * from './account.get';
+export * from './account/account.get';
 
-export * from './apikey.create';
-export * from './apikey.delete';
-export * from './apikey.get';
-export * from './apikey.list';
-export * from './apikey.update';
+export * from './apikey/apikey.create';
+export * from './apikey/apikey.delete';
+export * from './apikey/apikey.get';
+export * from './apikey/apikey.list';
+export * from './apikey/apikey.update';
 
-export * from './charge.list';
-export * from './charge.unpayd.list';
+export * from './charge/charge.list';
+export * from './charge/charge.unpayd.list';
 
-export * from './contract.change';
-export * from './contract.list';
+export * from './contract/contract.change';
+export * from './contract/contract.list';
 
-export * from './socket.start';
-export * from './socket.list';
-export * from './socket.close';
+export * from './socket/socket.start';
+export * from './socket/socket.list';
+export * from './socket/socket.close';
 
-export * from './telegram.list';
+export * from './telegram/telegram.list';
 
-export * from './billing.list';
-export * from './billing.get';
-export * from './billing.payment';
+export * from './billing/billing.list';
+export * from './billing/billing.get';
+export * from './billing/billing.payment';
 
-export * from './scope.list';
+export * from './scope/scope.list';
 
-export * from './oauthclient.create';
-export * from './oauthclient.update';
-export * from './oauthclient.list';
-export * from './oauthclient.get';
-export * from './oauthclient.delete';
+export * from './oauthclient/oauthclient.create';
+export * from './oauthclient/oauthclient.update';
+export * from './oauthclient/oauthclient.list';
+export * from './oauthclient/oauthclient.get';
+export * from './oauthclient/oauthclient.delete';
 
-export * from './oauthclient.approved.list';
-export * from './oauthclient.approved.delete';
+export * from './oauthclient/oauthclient.approved.list';
+export * from './oauthclient/oauthclient.approved.delete';
 
-export * from './gd.earthquake.list';
-export * from './gd.earthquake.event';
+export * from './gd/gd.earthquake.list';
+export * from './gd/gd.earthquake.event';
 
-export * from './gd.typhoon.list';
-export * from './gd.typhoon.event';
+export * from './gd/gd.typhoon.list';
+export * from './gd/gd.typhoon.event';
 
