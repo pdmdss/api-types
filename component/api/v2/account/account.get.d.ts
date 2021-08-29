@@ -17,7 +17,6 @@ export namespace APIV2AccountGet {
         cityCode: string;
       };
       isNoticeMail: boolean;
-      isCard: boolean;
       maxCharge: number;
       maxConnectionCounts: number;
       status: 'ok' | 'locked';
