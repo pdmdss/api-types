@@ -9,6 +9,7 @@ export namespace APIV2AccountCardList {
   export type RequestBodyJSON = {
     deleteIds?: number[];
     addToken?: string;
+    priority?: number;
   };
 
   export interface ResponseOk extends APIV2Head {
