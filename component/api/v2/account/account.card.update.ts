@@ -1,4 +1,3 @@
-import { APIV2Head } from '../head';
 import { APIV2BaseError } from '../error';
 
 export namespace APIV2AccountCardUpdate {
@@ -12,15 +11,7 @@ export namespace APIV2AccountCardUpdate {
     priority?: number;
   };
 
-  export interface ResponseOk extends APIV2Head {
-    status: 'ok';
-    items: {
-      id: number;
-      brand: string;
-      numberLast4: string;
-      createTime: string;
-      expiration: string;
-    }[];
+  export interface ResponseOk {
   }
 
   export type ResponseError = APIV2BaseError;
