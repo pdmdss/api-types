@@ -2,6 +2,8 @@ export * from './head';
 export * from './error';
 
 export * from './account/account.get';
+export * from './account/account.card.list';
+export * from './account/account.card.update';
 
 export * from './apikey/apikey.create';
 export * from './apikey/apikey.delete';

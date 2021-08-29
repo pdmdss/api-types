@@ -1,7 +1,7 @@
 import { APIV2Head } from '../head';
 import { APIV2BaseError } from '../error';
 
-export namespace APIV2AccountCardList {
+export namespace APIV2AccountCardUpdate {
   export type Method = 'POST';
 
   export type QueryParams = {};
