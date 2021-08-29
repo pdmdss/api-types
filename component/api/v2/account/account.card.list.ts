@@ -14,6 +14,7 @@ export namespace APIV2AccountCardList {
       numberLast4: string;
       createTime: string;
       expiration: string;
+      priority: boolean;
     }[];
   }
 
