@@ -9,11 +9,13 @@ export namespace APIV2ChargeCreate {
     type: 'card';
     cardToken?: string;
     cardId?: number;
+    amount: number;
   };
 
   type Convenience = {
     type: 'convenience';
     phone: string;
+    amount: number;
   };
 
   type Bank = {
@@ -23,11 +25,13 @@ export namespace APIV2ChargeCreate {
     familyNameKana: string;
     givenNameKana: string;
     phone: string;
+    amount: number;
   };
 
   type PayPal = {
     type: 'paypal';
     orderId: string;
+    amount: number;
   };
 
   export type RequestBodyJSON = Card | Convenience | Bank | PayPal;
