@@ -14,6 +14,7 @@ export namespace APIV2ChargeCreate {
 
   type Convenience = {
     type: 'convenience';
+    store: 'daily-yamazaki' | 'family-mart' | 'lawson' | 'ministop' | 'seicomart';
     phone: string;
     amount: number;
   };
