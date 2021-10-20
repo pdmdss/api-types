@@ -11,6 +11,7 @@ export * from './apikey/apikey.get';
 export * from './apikey/apikey.list';
 export * from './apikey/apikey.update';
 
+export * from './charge/charge.create';
 export * from './charge/charge.list';
 export * from './charge/charge.unpayd.list';
 
