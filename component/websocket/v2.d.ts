@@ -24,6 +24,7 @@ export type WebSocketV2Data = {
     designation: string | null;
     test: boolean;
     xml?: boolean;
+    binary?: boolean;
   };
   xmlReport?: XmlReport;
   format: null | 'xml' | 'a/n' | 'binary' | 'json';
