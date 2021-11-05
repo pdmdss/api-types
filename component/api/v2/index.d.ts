@@ -45,3 +45,7 @@ export * from './gd/gd.earthquake.event';
 export * from './gd/gd.typhoon.list';
 export * from './gd/gd.typhoon.event';
 
+export * from './notice/notice.news.get';
+export * from './notice/notice.news.list';
+export * from './notice/notice.maintenance.list';
+export * from './notice/notice.testings.list';
