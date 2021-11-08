@@ -12,6 +12,7 @@ export namespace APIV2ApiKeyList {
       id: number;
       name: string | null;
       key: string;
+      isProtection: boolean;
       createTime: string;
     }[];
   }
