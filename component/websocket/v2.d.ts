@@ -1,6 +1,30 @@
 import { XmlReport } from '../xml.report';
 import { ClassificationValues } from '../classification';
 
+export type WebSocketV2Passing = {
+  name: string;
+  time: string;
+};
+
+
+export type WebSocketV2DataBodySchema = {
+  type: string;
+  version: string;
+};
+export type WebSocketV2DataBodyFormats = 'xml' | 'a/n' | 'binary' | 'json' | 'shift-jis' | 'jis';
+export type WebSocketV2DataBodyCompressions = 'gzip' | 'zip' | null;
+export type WebSocketV2DataBodyEncodings = 'base64' | 'utf-8' | null;
+export type WebSocketV2DataHead = {
+  type: string;
+  author: string;
+  target?: string;
+  time: string;
+  designation: string | null;
+  test: boolean;
+  xml?: boolean;
+  binary?: boolean;
+};
+
 export type WebSocketV2Data = {
   type: 'data';
   version: '2.0';
@@ -8,32 +32,13 @@ export type WebSocketV2Data = {
   fingerprint?: string;
   originalId?: string;
   classification: ClassificationValues;
-  destinations?: {
-    sender: 'ires' | 'receive' | 'websocket' | 'jsonization';
-    address: 'ires' | 'websocket' | 'jsonization';
-  }[];
-  passing: {
-    name: string;
-    time: string;
-  }[];
-  head: {
-    type: string;
-    author: string;
-    target?: string;
-    time: string;
-    designation: string | null;
-    test: boolean;
-    xml?: boolean;
-    binary?: boolean;
-  };
+  passing: WebSocketV2Passing[];
+  head: WebSocketV2DataHead;
   xmlReport?: XmlReport;
-  format: null | 'xml' | 'a/n' | 'binary' | 'json';
-  schema?: {
-    type: string;
-    version: string;
-  };
-  compression: null | 'gzip' | 'zip';
-  encoding: null | 'base64' | 'utf-8';
+  format: WebSocketV2DataBodyFormats | null;
+  schema?: WebSocketV2DataBodySchema;
+  compression: WebSocketV2DataBodyCompressions;
+  encoding: WebSocketV2DataBodyEncodings;
   body: string;
 };
 
@@ -53,7 +58,7 @@ export type WebSocketV2Start = {
   classifications: ClassificationValues[];
   types: string[] | null;
   test: 'including' | 'no';
-  formats: ('xml' | 'a/n' | 'binary' | 'json')[];
+  formats: WebSocketV2DataBodyFormats[];
   appName: string | null;
   time: string;
 }
