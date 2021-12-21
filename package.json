@@ -1,12 +1,10 @@
 {
-  "name": "@pdmdss/api-types",
+  "name": "@dmdata/api-types",
   "version": "1.0.0",
   "description": "",
-  "type": "index.d.ts",
-  "scripts": {
-  },
+  "types": "index.d.ts",
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "typescript": "latest"
   }
