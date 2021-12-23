@@ -14,6 +14,8 @@ export * from './apikey/apikey.update';
 export * from './charge/charge.create';
 export * from './charge/charge.list';
 export * from './charge/charge.unpayd.list';
+export * from './charge/charge.code.create';
+export * from './charge/charge.code.list';
 
 export * from './contract/contract.change';
 export * from './contract/contract.list';
