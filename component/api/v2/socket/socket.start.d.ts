@@ -24,13 +24,13 @@ export namespace APIV2SocketStart {
       url: string;
       protocol: ['dmdata.v2'];
       expiration: number;
-    }
+    };
     classifications: ClassificationValues[];
     test: 'including' | 'no';
     types: string[] | null;
     formats: ('xml' | 'a/n' | 'binary' | 'json')[];
     appName: string | null;
-  };
+  }
 
   export type ResponseError =
     APIV2BaseError
