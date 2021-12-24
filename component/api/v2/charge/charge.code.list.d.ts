@@ -13,7 +13,8 @@ export namespace APIV2ChargeCodeList {
     status: 'ok';
     items: {
       id: number;
-      code:string;
+      code: string | null;
+      isRegistered: boolean;
       amount: {
         issued: number;
       };
