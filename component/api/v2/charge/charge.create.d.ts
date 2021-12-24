@@ -35,7 +35,12 @@ export namespace APIV2ChargeCreate {
     amount: number;
   };
 
-  export type RequestBodyJSON = Card | Convenience | Bank | PayPal;
+  type Code = {
+    type: 'code';
+    code: string;
+  }
+
+  export type RequestBodyJSON = Card | Convenience | Bank | PayPal | Code;
 
 
   export interface ResponseOk {
