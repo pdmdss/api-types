@@ -29,7 +29,6 @@ export type WebSocketV2Data = {
   type: 'data';
   version: '2.0';
   id: string;
-  fingerprint?: string;
   originalId?: string;
   classification: ClassificationValues;
   passing: WebSocketV2Passing[];
