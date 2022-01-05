@@ -9,6 +9,7 @@ import {
 
 export type WebSocketV2StrictStart = WebSocketV2Start & {
   mode: 'strict';
+  strictId: string;
 }
 
 export type WebSocketV2StrictData = Omit<WebSocketV2Data, 'type' | 'version'> & {
