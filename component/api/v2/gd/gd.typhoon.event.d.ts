@@ -1,7 +1,6 @@
 import { APIV2Head } from '../head';
 import { APIV2BaseError } from '../error';
-import { ClassificationValues } from '../../../classification';
-import { XmlReport } from '../../../xml.report';
+import { Telegram } from '../../../telegram';
 
 interface Coordinate {
   latitude?: { text: string, value: string };
@@ -90,29 +89,7 @@ export namespace APIV2GDWeatherTyphoonEvent {
           storm: Axis[];
         };
       }
-      telegrams?: [
-        {
-          id: string;
-          originalId: string;
-          serial: number;
-          classification: ClassificationValues;
-          head: {
-            type: string;
-            author: string;
-            time: string;
-            designation: string | null;
-            test: boolean;
-          };
-          receivedTime: string;
-          xmlReport: XmlReport;
-          format: 'json'
-          schema: {
-            type: string;
-            version: string;
-          };
-          url: string;
-        }
-      ]
+      telegrams?: [Telegram]
     }[];
     nextToken?: string;
   }
