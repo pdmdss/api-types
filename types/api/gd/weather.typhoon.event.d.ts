@@ -11,13 +11,24 @@ export namespace GDWeatherTyphoonEvent {
 
   export { Typhoon };
 
-  export interface Event extends Typhoon.Event {
+
+  export interface Event {
+    tcNumber: string;
+    name: {
+      text: string | null;
+      kana: string | null;
+      number: string | null;
+    };
+  }
+
+  export interface Item extends Typhoon.Event {
     telegrams: [Components.Telegram.ItemJSONOnly];
   }
 
   export interface ResponseOk extends APIHead {
     status: 'ok';
-    items: Event[];
+    event: Event;
+    items: Item[];
   }
 
   export type ResponseError = APIStandardError |
