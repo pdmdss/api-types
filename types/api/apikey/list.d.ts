@@ -11,10 +11,8 @@ export namespace ApikeyList {
   }
 
 
-  export interface Item extends Components.Apikey {
+  export interface Item extends Omit<Components.Apikey, 'scope' | 'allowed'> {
     isProtection: boolean;
-    scopes: never;
-    allowed: never;
   }
 
   export interface ResponseOk extends APIHead {
