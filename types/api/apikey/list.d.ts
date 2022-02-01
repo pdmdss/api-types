@@ -12,6 +12,8 @@ export namespace ApikeyList {
 
 
   export interface Item extends Components.Apikey {
+    isProtection: boolean;
+    scopes: never;
     allowed: never;
   }
 
