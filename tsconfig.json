@@ -1,10 +1,19 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2020",
+    "target": "es2021",
     "sourceMap": false,
-    "strict": true
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "@t/*": [
+        "./types/*"
+      ]
+    }
   },
+  "include": [
+    "types/**/*"
+  ],
   "exclude": [
     "node_modules"
   ]
