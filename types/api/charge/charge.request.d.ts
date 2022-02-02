@@ -30,10 +30,9 @@ export namespace ChargeRequest {
     orderId: string;
   }
 
-  export interface Code extends Base {
+  export interface Code extends Omit<Base, 'amount'> {
     type: 'code';
     code: string;
-    amount: never;
   }
 
   export type All = Card | Convenience | Bank | PayPal | Code;
