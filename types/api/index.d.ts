@@ -35,6 +35,7 @@ import { SocketClose } from './socket/close';
 import { SocketList } from './socket/list';
 import { SocketStart } from './socket/start';
 import { TelegramList } from './telegram/list';
+import { WebSocketV2 } from './websocket/v2';
 
 export namespace APITypes {
   export {
@@ -75,5 +76,6 @@ export namespace APITypes {
     SocketList,
     SocketStart,
     TelegramList,
+    WebSocketV2,
   };
 }
