@@ -1,4 +1,4 @@
-import { APIError, APIStandardError } from '@t/api/error';
+import { APIError, APIStandardError } from '../error';
 import { ChargeRequest } from '@t/api/charge/charge.request';
 
 export namespace ChargeCodeCreate {

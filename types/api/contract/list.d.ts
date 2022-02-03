@@ -1,5 +1,5 @@
-import { APIStandardError } from '@t/api/error';
-import { APIHead } from '@t/api/head';
+import { APIStandardError } from '../error';
+import { APIHead } from '../head';
 
 export namespace ContractList {
   export type Method = 'GET';

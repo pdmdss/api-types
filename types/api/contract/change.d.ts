@@ -1,4 +1,4 @@
-import { APIError, APIStandardError } from '@t/api/error';
+import { APIError, APIStandardError } from '../error';
 
 export namespace ContractChange {
   export type Method = 'POST';

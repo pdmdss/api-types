@@ -1,5 +1,5 @@
-import { APIError, APIStandardError } from '@t/api/error';
-import { APIHead } from '@t/api/head';
+import { APIError, APIStandardError } from '../error';
+import { APIHead } from '../head';
 
 export namespace NoticeNewsGet {
   export type Method = 'GET';

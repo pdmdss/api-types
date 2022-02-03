@@ -1,5 +1,5 @@
-import { APIHead } from '@t/api/head';
-import { APIStandardError } from '@t/api/error';
+import { APIHead } from '../head';
+import { APIStandardError } from '../error';
 
 export namespace AccountCardList {
   export type Method = 'GET';

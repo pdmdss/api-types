@@ -1,4 +1,4 @@
-import { APIStandardError } from '@t/api/error';
+import { APIStandardError } from '../error';
 
 export namespace AccountCardUpdate {
   export type Method = 'POST';

@@ -5,11 +5,6 @@
     "sourceMap": false,
     "strict": true,
     "baseUrl": "./",
-    "paths": {
-      "@t/*": [
-        "./types/*"
-      ]
-    }
   },
   "include": [
     "types/**/*"

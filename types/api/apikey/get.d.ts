@@ -1,6 +1,6 @@
-import { APIHead } from '@t/api/head';
-import { APIStandardError } from '@t/api/error';
-import { Components } from '@t/components';
+import { APIHead } from '../head';
+import { APIStandardError } from '../error';
+import { Components } from '../../components';
 
 export namespace ApikeyGet {
   export type Method = 'GET';

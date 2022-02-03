@@ -1,4 +1,4 @@
-import { Components } from '@t/components';
+import { Components } from '../../components';
 
 type DataFormat = 'xml' | 'a/n' | 'binary' | 'json' | 'shift-jis' | 'jis' | null;
 type DataCompression = 'gzip' | 'zip' | null;

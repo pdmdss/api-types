@@ -1,6 +1,6 @@
-import { APIHead } from '@t/api/head';
-import { APIError, APIStandardError } from '@t/api/error';
-import { Components } from '@t/components';
+import { APIHead } from '../head';
+import { APIError, APIStandardError } from '../error';
+import { Components } from '../../components';
 
 export namespace ApikeyCreate {
   export type Method = 'POST';

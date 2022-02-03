@@ -1,4 +1,4 @@
-import { APIHead } from '@t/api/head';
+import { APIHead } from '../head';
 
 export namespace ScopeList {
   export type Method = 'GET';

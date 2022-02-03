@@ -1,6 +1,6 @@
-import { APIHead } from '@t/api/head';
-import { Components } from '@t/components';
-import { APIStandardError } from '@t/api/error';
+import { APIHead } from '../head';
+import { Components } from '../../components';
+import { APIStandardError } from '../error';
 
 export namespace GDEewEvent {
   export type Method = 'GET';
