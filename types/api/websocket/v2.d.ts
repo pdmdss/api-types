@@ -1,6 +1,6 @@
 import { Components } from '@t/components';
 
-type DataFormat = 'xml' | 'a/n' | 'binary' | 'json' | 'shift-jis' | 'jis';
+type DataFormat = 'xml' | 'a/n' | 'binary' | 'json' | 'shift-jis' | 'jis' | null;
 type DataCompression = 'gzip' | 'zip' | null;
 type DataEncoding = 'base64' | 'utf-8' | null;
 
