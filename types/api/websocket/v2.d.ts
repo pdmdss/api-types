@@ -26,7 +26,7 @@ interface DataHead {
   binary?: boolean;
 }
 
-interface SplitReports {
+interface SplitReport {
   id: string;
   passing: DataPassing[];
   head: DataHead;
@@ -42,6 +42,7 @@ export namespace WebSocketV2 {
     DataPassing,
     DataHead,
     DataSchema,
+    SplitReport,
   };
 }
 
@@ -54,7 +55,7 @@ declare namespace Event {
     classification: Components.Classification.Values;
     passing: DataPassing[];
     head: DataHead;
-    splitReport?: SplitReports[];
+    splitReports?: SplitReport[];
     xmlReport?: Components.XmlReport;
     schema?: DataSchema;
     format: DataFormat;
