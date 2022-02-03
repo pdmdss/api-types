@@ -96,7 +96,7 @@ export namespace Eew {
     eventId: string;
     serial: number;
     isCanceled: boolean;
-    isWarning: boolean;
+    isWarning?: boolean;
     dateTime: string;
     earthquake?: Earthquake;
     intensity?: Intensity;
