@@ -95,6 +95,7 @@ export namespace Eew {
     id: number;
     eventId: string;
     serial: number;
+    isLastInfo: boolean;
     isCanceled: boolean;
     isWarning?: boolean;
     dateTime: string;
