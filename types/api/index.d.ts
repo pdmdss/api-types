@@ -18,6 +18,8 @@ import { ContractChange } from './contract/change';
 import { ContractList } from './contract/list';
 import { GDEarthquakeEvent } from './gd/earthquake.event';
 import { GDEarthquakeList } from './gd/earthquake.list';
+import { GDEewEvent } from './gd/eew.event';
+import { GDEewList } from './gd/eew.list';
 import { GDWeatherTyphoonEvent } from './gd/weather.typhoon.event';
 import { GDWeatherTyphoonList } from './gd/weather.typhoon.list';
 import { NoticeNewsGet } from './notice/news.get';
@@ -59,6 +61,8 @@ export namespace APITypes {
     ContractList,
     GDEarthquakeEvent,
     GDEarthquakeList,
+    GDEewEvent,
+    GDEewList,
     GDWeatherTyphoonEvent,
     GDWeatherTyphoonList,
     NoticeNewsGet,
