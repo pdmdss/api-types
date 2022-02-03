@@ -15,7 +15,7 @@ interface DataSchema {
 }
 
 
-export interface EventDataHead {
+interface DataHead {
   type: string;
   author: string;
   target?: string;
@@ -26,6 +26,12 @@ export interface EventDataHead {
   binary?: boolean;
 }
 
+interface SplitReports {
+  id: string;
+  passing: DataPassing[];
+  head: DataHead;
+}
+
 export namespace WebSocketV2 {
   export {
     Event,
@@ -34,7 +40,8 @@ export namespace WebSocketV2 {
     DataCompression,
     DataEncoding,
     DataPassing,
-    DataSchema
+    DataHead,
+    DataSchema,
   };
 }
 
@@ -46,7 +53,8 @@ declare namespace Event {
     originalId?: string;
     classification: Components.Classification.Values;
     passing: DataPassing[];
-    head: EventDataHead;
+    head: DataHead;
+    splitReport?: SplitReports[];
     xmlReport?: Components.XmlReport;
     schema?: DataSchema;
     format: DataFormat;
