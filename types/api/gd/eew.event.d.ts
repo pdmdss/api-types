@@ -10,6 +10,7 @@ export namespace GDEewEvent {
 
 
   export interface Event extends Components.Eew.Event {
+    telegrams: [Components.Telegram.ItemJSONOnly];
   }
 
   export interface ResponseOk extends APIHead {
