@@ -11,7 +11,7 @@ export namespace ApikeyList {
   }
 
 
-  export interface Item extends Omit<Components.Apikey, 'scope' | 'allowed'> {
+  export interface Item extends Omit<Components.Apikey, 'scopes' | 'allowed'> {
     isProtection: boolean;
   }
 
