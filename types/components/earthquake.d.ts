@@ -1,6 +1,6 @@
 export namespace Earthquake {
   export type IntensityClass = '1' | '2' | '3' | '4' | '5-' | '5+' | '6-' | '6+' | '7';
-  export type LpgmIntensityClass = '1' | '2' | '3' | '4';
+  export type LpgmIntensityClass = '0' | '1' | '2' | '3' | '4';
 
   export interface Coordinate {
     latitude: {
@@ -50,7 +50,7 @@ export namespace Earthquake {
     arrivalTime: string;
     hypocenter?: EarthquakeHypocenter;
     magnitude?: EarthquakeMagnitude;
-    maxInt: IntensityClass;
-    maxLpgmInt: LpgmIntensityClass;
+    maxInt?: IntensityClass;
+    maxLpgmInt?: LpgmIntensityClass;
   }
 }
