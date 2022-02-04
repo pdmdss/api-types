@@ -6,6 +6,9 @@ export namespace GDEewList {
   export type Method = 'GET';
 
   export interface QueryParams {
+    limit?: number;
+    cursorToken?: string;
+    datetime?: string;
   }
 
 
@@ -16,6 +19,7 @@ export namespace GDEewList {
   export interface ResponseOk extends APIHead {
     status: 'ok';
     items: Event[];
+    nextToken?: string;
   }
 
   export type ResponseError = APIStandardError;

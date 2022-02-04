@@ -6,9 +6,6 @@ export namespace GDEewEvent {
   export type Method = 'GET';
 
   export interface QueryParams {
-    limit?: number;
-    cursorToken?: string;
-    datetime?: string;
   }
 
 
