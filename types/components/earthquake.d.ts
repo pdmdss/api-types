@@ -3,26 +3,28 @@ export namespace Earthquake {
   export type LpgmIntensityClass = '0' | '1' | '2' | '3' | '4';
 
   export interface Coordinate {
-    latitude: {
+    latitude?: {
       text: string;
       value: string;
     };
-    longitude: {
+    longitude?: {
       text: string;
       value: string;
     };
-    height: {
+    height?: {
       type: '高さ';
       unit: 'm';
       value: string;
     };
-    geodeticSystem: '日本測地系';
+    geodeticSystem?: '日本測地系';
+    condition?: string;
   }
 
   export interface EarthquakeHypocenterDepth {
     type: '深さ';
     unit: 'km';
-    value: string;
+    value: string | null;
+    condition?: 'ごく浅い' | '７００ｋｍ以上' | '不明';
   }
 
   export interface EarthquakeHypocenter {
@@ -30,18 +32,15 @@ export namespace Earthquake {
     name: string;
     coordinate: Coordinate;
     depth: EarthquakeHypocenterDepth;
+    source?: string;
   }
 
-  export type EarthquakeMagnitude = {
+  export interface EarthquakeMagnitude {
     type: 'マグニチュード';
     unit: 'Mj' | 'M';
-  } & ({
-    value: string;
-    condition: never;
-  } | {
-    value: null;
-    condition: 'Ｍ不明';
-  })
+    value: string | null;
+    condition?: 'Ｍ不明' | 'Ｍ８を超える巨大地震';
+  }
 
   export interface Event {
     id: number;
