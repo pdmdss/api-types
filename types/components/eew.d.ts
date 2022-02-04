@@ -50,20 +50,16 @@ export namespace Eew {
     accuracy: EarthquakeHypocenterAccuracy;
   }
 
-  export type EarthquakeMagnitude = {
+  export interface EarthquakeMagnitude {
     type: 'マグニチュード';
     unit: 'Mj' | 'M';
-  } & ({
-    value: string;
-    condition: never;
-  } | {
-    value: null;
-    condition: 'Ｍ不明';
-  })
+    value: string | null;
+    condition?: 'Ｍ不明';
+  }
 
   export interface Earthquake {
-    originTime: string;
-    arrivalTime?: string;
+    originTime?: string;
+    arrivalTime: string;
     condition?: '仮定震源要素';
     hypocenter: EarthquakeHypocenter;
     magnitude: EarthquakeMagnitude;
@@ -74,7 +70,7 @@ export namespace Eew {
     to: IntensityClass | 'over' | '不明';
   }
 
-  export interface IntensityForecastLpgmMaxInt {
+  export interface IntensityForecastMaxLpgmInt {
     from: LpgmIntensityClass | '不明';
     to: LpgmIntensityClass | 'over' | '不明';
   }
@@ -87,7 +83,7 @@ export namespace Eew {
 
   export interface Intensity {
     forecastMaxInt: IntensityForecastMaxInt;
-    forecastLpgmMaxInt?: IntensityForecastLpgmMaxInt;
+    forecastMaxLpgmInt?: IntensityForecastMaxLpgmInt;
     appendix?: IntensityAppendix;
   }
 
@@ -101,5 +97,6 @@ export namespace Eew {
     dateTime: string;
     earthquake?: Earthquake;
     intensity?: Intensity;
+    text?: string;
   }
 }
