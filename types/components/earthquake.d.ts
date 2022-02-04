@@ -44,7 +44,7 @@ export namespace Earthquake {
   })
 
   export interface Event {
-    id: string;
+    id: number;
     eventId: string;
     originTime?: string;
     arrivalTime: string;
