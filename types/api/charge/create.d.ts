@@ -1,5 +1,5 @@
 import { APIError, APIStandardError } from '../error';
-import { ChargeRequest } from '@t/api/charge/charge.request';
+import { ChargeRequest } from './charge.request';
 
 export namespace ChargeCreate {
   export type Method = 'POST';

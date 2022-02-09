@@ -1,6 +1,6 @@
-import { Classification } from '@t/components/classification';
-import { XmlReport } from '@t/components/xml.report';
-import { Formats } from '@t/components/formats';
+import { Classification } from './classification';
+import { XmlReport } from './xml.report';
+import { Formats } from './formats';
 
 export namespace Telegram {
   interface Item {
