@@ -10,7 +10,8 @@ export namespace TelegramList {
     type?: string | string[];
     xmlReport?: 'true' | 'false';
     test?: 'including' | 'no' | 'only';
-    formatMode?: 'raw';
+    formatMode?: 'raw' | 'json';
+    datetime?: string;
     cursorToken?: string;
   }
 
