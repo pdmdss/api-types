@@ -32,6 +32,7 @@ import { OAuthClientDelete } from './oauthclient/delete';
 import { OAuthClientGet } from './oauthclient/get';
 import { OAuthClientList } from './oauthclient/list';
 import { OAuthClientUpdate } from './oauthclient/update';
+import { ParameterEarthquakeStation } from './parameter/earthquake.station';
 import { ScopeList } from './scope/list';
 import { SocketClose } from './socket/close';
 import { SocketList } from './socket/list';
@@ -75,6 +76,7 @@ export namespace APITypes {
     OAuthClientGet,
     OAuthClientList,
     OAuthClientUpdate,
+    ParameterEarthquakeStation,
     ScopeList,
     SocketClose,
     SocketList,
