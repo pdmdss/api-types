@@ -21,7 +21,7 @@ export namespace BillingGet {
       id: number;
       name: string;
     };
-    targetTime: {
+    period: {
       start: string;
       end: string | null;
     };
@@ -42,6 +42,7 @@ export namespace BillingGet {
   }
 
   export interface Item {
+    id: number;
     status: 'prepayment' | 'liquidation';
     contracts: ContractItem[];
     payments: Payment[];
@@ -52,9 +53,8 @@ export namespace BillingGet {
 
   export interface ResponseOk extends APIHead {
     status: 'ok';
-    targetDate: string;
-    billingId?: number;
-    items: Item [];
+    target: string;
+    items: Item[];
   }
 
   export type ResponseError = APIStandardError;
