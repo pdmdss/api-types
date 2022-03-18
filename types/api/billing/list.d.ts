@@ -11,15 +11,15 @@ export namespace BillingList {
 
 
   export interface Item {
-    id: number;
-    target: {
-      start: string;
-      end: string;
-    };
-    status: 'pending' | 'paid' | 'partialFailure' | 'failure';
+    target: string;
+    status: 'prepayment' | 'liquidation';
     amount: {
+      settlement: number;
+      determined: number | null;
+      refund: number | null;
+      discount: number | null;
+      tax: number;
       total: number;
-      unpaid: number;
     };
   }
 

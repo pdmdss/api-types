@@ -7,31 +7,54 @@ export namespace BillingGet {
   export interface QueryParams {
   }
 
+  export interface Payment {
+    id: number;
+    agency: 'payjp' | 'dmdata';
+    amount: {
+      settlement: number;
+      refund: number | null;
+    };
+  }
 
-  export interface Item {
-    planId: number;
-    planName: string;
+  export interface ContractItem {
+    plan: {
+      id: number;
+      name: string;
+    };
     targetTime: {
       start: string;
       end: string | null;
-    }[];
+    };
     amount: {
-      subtotal: number;
+      settlement: number;
+      determined: number | null;
+      refund: number | null;
     };
   }
 
   export interface Amount {
+    settlement: number;
+    determined: number | null;
+    refund: number | null;
+    discount: number | null;
+    tax: number;
     total: number;
-    discount: number;
-    payment: number;
+  }
+
+  export interface Item {
+    status: 'prepayment' | 'liquidation';
+    contracts: ContractItem[];
+    payments: Payment[];
+    amount: Amount;
+    createTime: string;
+    updateTime: string;
   }
 
   export interface ResponseOk extends APIHead {
     status: 'ok';
     targetDate: string;
     billingId?: number;
-    items: Item[];
-    amount: Amount;
+    items: Item [];
   }
 
   export type ResponseError = APIStandardError;

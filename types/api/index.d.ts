@@ -7,7 +7,6 @@ import { ApikeyGet } from './apikey/get';
 import { ApikeyList } from './apikey/list';
 import { ApikeyUpdate } from './apikey/update';
 import { BillingGet } from './billing/get';
-import { BillingGetPayment } from './billing/get.payment';
 import { BillingList } from './billing/list';
 import { ChargeCodeCreate } from './charge/code.create';
 import { ChargeCodeList } from './charge/code.list';
@@ -52,7 +51,6 @@ export namespace APITypes {
     ApikeyList,
     ApikeyUpdate,
     BillingGet,
-    BillingGetPayment,
     BillingList,
     ChargeCodeCreate,
     ChargeCodeList,
