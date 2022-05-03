@@ -18,7 +18,7 @@ export namespace StatisticsList {
 
   export interface Module {
     module: string;
-    requests: ModuleRequest[];
+    requests: ModuleRequest;
   }
 
   export interface Item {
