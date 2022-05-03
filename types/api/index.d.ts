@@ -37,6 +37,7 @@ import { ScopeList } from './scope/list';
 import { SocketClose } from './socket/close';
 import { SocketList } from './socket/list';
 import { SocketStart } from './socket/start';
+import { StatisticsList } from './statistics/list';
 import { TelegramList } from './telegram/list';
 import { WebSocketV2 } from './websocket/v2';
 
@@ -81,7 +82,8 @@ export namespace APITypes {
     SocketClose,
     SocketList,
     SocketStart,
+    StatisticsList,
     TelegramList,
-    WebSocketV2,
+    WebSocketV2
   };
 }
