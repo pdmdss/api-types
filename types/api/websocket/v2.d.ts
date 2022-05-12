@@ -14,6 +14,11 @@ interface DataSchema {
   version: string;
 }
 
+interface Destination {
+  type: string;
+  id: string;
+}
+
 
 interface DataHead {
   type: string;
@@ -54,6 +59,7 @@ declare namespace Event {
     originalId?: string;
     classification: Components.Classification.Values;
     passing: DataPassing[];
+    destinations?: Destination[];
     head: DataHead;
     splitReports?: SplitReport[];
     xmlReport?: Components.XmlReport;
