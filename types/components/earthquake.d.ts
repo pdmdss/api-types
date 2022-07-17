@@ -92,6 +92,7 @@ export namespace Earthquake {
 
   export interface Event {
     id: number;
+    type: 'normal' | 'distant';
     eventId: string;
     originTime?: string;
     arrivalTime: string;
