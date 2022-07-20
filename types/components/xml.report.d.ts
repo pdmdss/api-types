@@ -15,7 +15,7 @@ export interface XmlReport {
     validDateTime?: string;
     eventId: string | null;
     serial: string | null;
-    infoType: '通常' | '取消' | '訂正' | '遅延';
+    infoType: '発表' | '取消' | '訂正' | '遅延';
     infoKind: string;
     infoKindVersion: string;
     headline: string | null;
