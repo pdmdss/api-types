@@ -47,7 +47,7 @@ export namespace WebSocketV2 {
     DataPassing,
     DataHead,
     DataSchema,
-    SplitReport,
+    SplitReport
   };
 }
 
@@ -83,7 +83,7 @@ declare namespace Event {
   export interface Start {
     type: 'start';
     socketId: number;
-    classifications: Components.Classification.Values[];
+    classifications: (Components.Classification.Values | string)[];
     types: string[] | null;
     test: 'including' | 'no';
     formats: DataFormat[];
@@ -93,8 +93,8 @@ declare namespace Event {
 
   export interface ChangeClassification {
     type: 'change.classification';
-    ends: Components.Classification.Values[];
-    after: Components.Classification.Values[];
+    ends: (Components.Classification.Values | string)[];
+    after: (Components.Classification.Values | string)[];
   }
 
   export interface Error {

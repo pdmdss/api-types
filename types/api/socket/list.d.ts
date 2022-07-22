@@ -16,7 +16,7 @@ export namespace SocketList {
   export interface Item {
     id: number;
     ticket: string | null;
-    classifications: Components.Classification.Values[];
+    classifications: (Components.Classification.Values | string)[];
     test: 'including' | 'no';
     types: string[] | null;
     start: string;

@@ -9,7 +9,7 @@ export namespace SocketStart {
   }
 
   export interface RequestBodyJSON {
-    classifications: Components.Classification.Values[],
+    classifications: (Components.Classification.Values | string)[];
     types?: string[];
     test?: 'including' | 'no';
     appName?: string;
@@ -26,7 +26,7 @@ export namespace SocketStart {
       protocol: ['dmdata.v2'];
       expiration: number;
     };
-    classifications: Components.Classification.Values[];
+    classifications: (Components.Classification.Values | string)[];
     test: 'including' | 'no';
     types: string[] | null;
     formats: ('xml' | 'a/n' | 'binary' | 'json')[];
