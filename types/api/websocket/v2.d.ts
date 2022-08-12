@@ -4,6 +4,9 @@ type DataFormat = 'xml' | 'a/n' | 'binary' | 'json' | 'shift-jis' | 'jis' | null
 type DataCompression = 'gzip' | 'zip' | null;
 type DataEncoding = 'base64' | 'utf-8' | null;
 
+type FileFormat = 'xml' | 'grib2' | 'bufr3' | 'bufr4' | 'pdf' | 'png' | 'jpeg' | null;
+type FileCompression = 'gzip' | 'zip' | 'tar' | 'tar.gzip' | null;
+
 interface DataPassing {
   name: string;
   time: string;
@@ -31,6 +34,14 @@ interface DataHead {
   binary?: boolean;
 }
 
+interface FileHead {
+  filename: string;
+  type: string;
+  author: string;
+  target?: string;
+  time: string;
+}
+
 interface SplitReport {
   id: string;
   passing: DataPassing[];
@@ -47,6 +58,9 @@ export namespace WebSocketV2 {
     DataPassing,
     DataHead,
     DataSchema,
+    FileFormat,
+    FileCompression,
+    FileHead,
     SplitReport
   };
 }
@@ -68,6 +82,20 @@ declare namespace Event {
     compression: DataCompression;
     encoding: DataEncoding;
     body: string;
+  }
+
+  export interface File {
+    type: 'file';
+    version: '1.0';
+    id: string;
+    classification: Components.Classification.Values;
+    passing: DataPassing[];
+    destinations?: Destination[];
+    head: FileHead;
+    format: FileFormat;
+    compression: FileCompression;
+    sendMode: 'buffer';
+    bodyLength: number;
   }
 
   export interface Ping {
@@ -104,5 +132,5 @@ declare namespace Event {
     close: boolean;
   }
 
-  export type All = Data | Ping | Pong | Start | ChangeClassification | Error;
+  export type All = Data | File | Ping | Pong | Start | ChangeClassification | Error;
 }
