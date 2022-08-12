@@ -10,6 +10,7 @@ export namespace AccountGet {
 
   export interface Account {
     id: number;
+    type: 'customer' | 'business';
     mailAddress: string;
     twoFactorAuth: boolean;
     domicile: {
