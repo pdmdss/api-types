@@ -1,6 +1,7 @@
 export namespace Earthquake {
   export type IntensityClass = '1' | '2' | '3' | '4' | '5-' | '5+' | '6-' | '6+' | '7';
-  export type LpgmIntensityClass = '0' | '1' | '2' | '3' | '4';
+  export type LgIntensityClass = '0' | '1' | '2' | '3' | '4';
+  export type LgCategory = '1' | '2' | '3' | '4';
 
   interface CoordinateNormal {
     latitude: {
@@ -99,6 +100,7 @@ export namespace Earthquake {
     hypocenter?: EarthquakeHypocenter;
     magnitude?: EarthquakeMagnitude;
     maxInt?: IntensityClass;
-    maxLpgmInt?: LpgmIntensityClass;
+    maxLgInt?: LgIntensityClass;
+    lgCategory?: LgCategory;
   }
 }
