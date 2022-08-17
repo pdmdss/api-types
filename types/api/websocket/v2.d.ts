@@ -1,10 +1,10 @@
 import { Components } from '../../components';
 
-type DataFormat = 'xml' | 'a/n' | 'binary' | 'json' | 'shift-jis' | 'jis' | null;
+type DataFormat = Components.Formats | null;
 type DataCompression = 'gzip' | 'zip' | null;
 type DataEncoding = 'base64' | 'utf-8' | null;
 
-type FileFormat = 'xml' | 'grib2' | 'bufr3' | 'bufr4' | 'pdf' | 'png' | 'jpeg' | null;
+type FileFormat = 'xml' | 'grib2' | 'bufr3' | 'bufr4' | 'pdf' | 'png' | 'jpeg' | 'gif' | null;
 type FileCompression = 'gzip' | 'zip' | 'tar' | 'tar.gzip' | null;
 
 interface DataPassing {
