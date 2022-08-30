@@ -21,6 +21,7 @@ export namespace AccountGet {
     maxCharge: number;
     maxConnectionCounts: number;
     status: 'ok' | 'locked';
+    org?: string[];
   }
 
   export interface ResponseOk extends APIHead {
