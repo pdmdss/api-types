@@ -13,6 +13,7 @@ import { ChargeCodeList } from './charge/code.list';
 import { ChargeCreate } from './charge/create';
 import { ChargeList } from './charge/list';
 import { ChargeUnpaidList } from './charge/unpaid.list';
+import { ContractApplication } from './contract/application';
 import { ContractChange } from './contract/change';
 import { ContractList } from './contract/list';
 import { GDEarthquakeEvent } from './gd/earthquake.event';
@@ -60,6 +61,7 @@ export namespace APITypes {
     ChargeUnpaidList,
     ContractChange,
     ContractList,
+    ContractApplication,
     GDEarthquakeEvent,
     GDEarthquakeList,
     GDEewEvent,
