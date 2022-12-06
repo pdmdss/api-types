@@ -32,6 +32,7 @@ interface DataHead {
   test: boolean;
   xml?: boolean;
   binary?: boolean;
+  bch?: string;
 }
 
 interface FileHead {
@@ -75,6 +76,10 @@ declare namespace Event {
     passing: DataPassing[];
     destinations?: Destination[];
     head: DataHead;
+
+    /**
+     * @deprecated
+     */
     splitReports?: SplitReport[];
     xmlReport?: Components.XmlReport;
     schema?: DataSchema;
