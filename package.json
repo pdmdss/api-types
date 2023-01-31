@@ -1,6 +1,6 @@
 {
   "name": "@dmdata/api-types",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "description": "",
   "types": "index.d.ts",
   "scripts": {
