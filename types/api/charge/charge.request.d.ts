@@ -6,8 +6,7 @@ export namespace ChargeRequest {
 
   export interface Card extends Base {
     type: 'card';
-    cardToken?: string;
-    cardId?: number;
+    agencyId: string;
   }
 
   export interface Convenience extends Base {
