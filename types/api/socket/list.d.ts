@@ -26,6 +26,7 @@ export namespace SocketList {
     server: string | null;
     appName: string | null;
     status: 'waiting' | 'open' | 'closed';
+    sandboxId?: string;
   }
 
   export interface ResponseOk extends APIHead {

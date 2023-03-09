@@ -72,6 +72,7 @@ declare namespace Event {
     version: '2.0';
     id: string;
     originalId?: string;
+    sandboxId?: string;
     classification: Components.Classification.Values;
     passing: DataPassing[];
     destinations?: Destination[];
@@ -93,6 +94,7 @@ declare namespace Event {
     type: 'file';
     version: '1.0';
     id: string;
+    sandboxId?: string;
     classification: Components.Classification.Values;
     passing: DataPassing[];
     destinations?: Destination[];
@@ -121,6 +123,7 @@ declare namespace Event {
     test: 'including' | 'no';
     formats: DataFormat[];
     appName: string | null;
+    sandboxId?: string;
     time: string;
   }
 

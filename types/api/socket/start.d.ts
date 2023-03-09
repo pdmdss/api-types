@@ -14,6 +14,7 @@ export namespace SocketStart {
     test?: 'including' | 'no';
     appName?: string;
     formatMode?: 'raw' | 'json';
+    sandboxId?: string;
   }
 
 
@@ -31,6 +32,7 @@ export namespace SocketStart {
     types: string[] | null;
     formats: ('xml' | 'a/n' | 'binary' | 'json')[];
     appName: string | null;
+    sandboxId?: string;
   }
 
   export type ResponseError = APIStandardError |
