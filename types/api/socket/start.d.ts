@@ -36,7 +36,9 @@ export namespace SocketStart {
   }
 
   export type ResponseError = APIStandardError |
+    APIError<string, 402> |
     APIError<string, 404> |
+    APIError<string, 409> |
     APIError<string, 412>;
 
   export type Response = ResponseError | ResponseOk;
