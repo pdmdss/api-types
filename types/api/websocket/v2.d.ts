@@ -4,8 +4,8 @@ type DataFormat = Components.Formats | null;
 type DataCompression = 'gzip' | 'zip' | null;
 type DataEncoding = 'base64' | 'utf-8' | null;
 
-type FileFormat = 'xml' | 'grib2' | 'bufr3' | 'bufr4' | 'pdf' | 'png' | 'jpeg' | 'gif' | null;
-type FileCompression = 'gzip' | 'zip' | 'tar' | 'tar.gzip' | null;
+type FileFormat = 'xml' | 'grib2' | 'bufr3' | 'bufr4' | 'bpf' | 'shp' | 'shx' | 'pdf' | 'png' | 'jpeg' | 'gif' | null;
+type FileCompression = 'gzip' | 'zip' | null;
 
 interface DataPassing {
   name: string;
@@ -16,12 +16,6 @@ interface DataSchema {
   type: string;
   version: string;
 }
-
-interface Destination {
-  type: string;
-  id: string;
-}
-
 
 interface DataHead {
   type: string;
@@ -37,16 +31,16 @@ interface DataHead {
 
 interface FileHead {
   filename: string;
-  type: string;
   author: string;
-  target?: string;
   time: string;
-}
-
-interface SplitReport {
-  id: string;
-  passing: DataPassing[];
-  head: DataHead;
+  format: FileFormat;
+  values: string[];
+  flags: {
+    product: 'T' | 'A' | 'W' | 'Z';
+    productIdentifier?: string;
+    originator: 'C' | 'J';
+  };
+  length: number;
 }
 
 export namespace WebSocketV2 {
@@ -61,8 +55,7 @@ export namespace WebSocketV2 {
     DataSchema,
     FileFormat,
     FileCompression,
-    FileHead,
-    SplitReport
+    FileHead
   };
 }
 
@@ -72,16 +65,9 @@ declare namespace Event {
     version: '2.0';
     id: string;
     originalId?: string;
-    sandboxId?: string;
     classification: Components.Classification.Values;
     passing: DataPassing[];
-    destinations?: Destination[];
     head: DataHead;
-
-    /**
-     * @deprecated
-     */
-    splitReports?: SplitReport[];
     xmlReport?: Components.XmlReport;
     schema?: DataSchema;
     format: DataFormat;
@@ -94,15 +80,12 @@ declare namespace Event {
     type: 'file';
     version: '1.0';
     id: string;
-    sandboxId?: string;
-    classification: Components.Classification.Values;
+    classification?: string;
     passing: DataPassing[];
-    destinations?: Destination[];
-    head: FileHead;
-    format: FileFormat;
+    heads: FileHead[];
     compression: FileCompression;
-    sendMode: 'buffer';
-    bodyLength: number;
+    sendMode: 'binary';
+    length: number;
   }
 
   export interface Ping {
@@ -123,7 +106,6 @@ declare namespace Event {
     test: 'including' | 'no';
     formats: DataFormat[];
     appName: string | null;
-    sandboxId?: string;
     time: string;
   }
 
