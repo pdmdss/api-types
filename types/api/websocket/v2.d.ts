@@ -4,8 +4,20 @@ type DataFormat = Components.Formats | null;
 type DataCompression = 'gzip' | 'zip' | null;
 type DataEncoding = 'base64' | 'utf-8' | null;
 
-type FileFormat = 'xml' | 'grib2' | 'bufr3' | 'bufr4' | 'bpf' | 'shp' | 'shx' | 'pdf' | 'png' | 'jpeg' | 'gif' | null;
-type FileCompression = 'gzip' | 'zip' | null;
+type JmaFileFormat =
+  'xml'
+  | 'grib2'
+  | 'bufr3'
+  | 'bufr4'
+  | 'bpf'
+  | 'shp'
+  | 'shx'
+  | 'pdf'
+  | 'png'
+  | 'jpeg'
+  | 'gif'
+  | null;
+type JmaFileCompression = 'gzip' | 'zip' | null;
 
 interface DataPassing {
   name: string;
@@ -29,11 +41,11 @@ interface DataHead {
   bch?: string;
 }
 
-interface FileHead {
+interface JmaFileHead {
   filename: string;
   author: string;
   time: string;
-  format: FileFormat;
+  format: JmaFileFormat;
   values: string[];
   flags: {
     product: 'T' | 'A' | 'W' | 'Z';
@@ -53,9 +65,9 @@ export namespace WebSocketV2 {
     DataPassing,
     DataHead,
     DataSchema,
-    FileFormat,
-    FileCompression,
-    FileHead
+    JmaFileFormat,
+    JmaFileCompression,
+    JmaFileHead
   };
 }
 
@@ -76,14 +88,14 @@ declare namespace Event {
     body: string;
   }
 
-  export interface File {
-    type: 'file';
+  export interface JmaFile {
+    type: 'jmafile';
     version: '1.0';
     id: string;
     classification?: string;
     passing: DataPassing[];
-    heads: FileHead[];
-    compression: FileCompression;
+    heads: JmaFileHead[];
+    compression: JmaFileCompression;
     sendMode: 'binary';
     length: number;
   }
@@ -122,5 +134,5 @@ declare namespace Event {
     close: boolean;
   }
 
-  export type All = Data | File | Ping | Pong | Start | ChangeClassification | Error;
+  export type All = Data | JmaFile | Ping | Pong | Start | ChangeClassification | Error;
 }
