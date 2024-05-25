@@ -23,6 +23,7 @@ import { GDEewEvent } from './gd/eew.event';
 import { GDEewList } from './gd/eew.list';
 import { GDWeatherTyphoonEvent } from './gd/weather.typhoon.event';
 import { GDWeatherTyphoonList } from './gd/weather.typhoon.list';
+import { JmaFileList } from './jmafile/list';
 import { NoticeNewsGet } from './notice/news.get';
 import { NoticeNewsList } from './notice/news.list';
 import { NoticeTestingsList } from './notice/testings.list';
@@ -70,6 +71,7 @@ export namespace APITypes {
     GDEewList,
     GDWeatherTyphoonEvent,
     GDWeatherTyphoonList,
+    JmaFileList,
     NoticeNewsGet,
     NoticeNewsList,
     NoticeTestingsList,

@@ -6,7 +6,7 @@ export namespace Telegram {
   interface Item {
     id: string;
     originalId?: string;
-    serial: number;
+    serial: number | string;
     classification: Classification.Values;
     head: {
       type: string;
@@ -29,6 +29,3 @@ export namespace Telegram {
     format: 'json';
   }
 }
-
-
-
