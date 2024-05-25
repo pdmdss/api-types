@@ -4,6 +4,9 @@ export namespace Classification {
     Volcano: 'telegram.volcano';
     Weather: 'telegram.weather';
     Scheduled: 'telegram.scheduled';
+    Forecast: 'telegram.forecast';
+    Observation: 'telegram.observation';
+    Lightning: 'telegram.lightning';
   };
 
   export type TelegramValues = Telegram[keyof Telegram];
