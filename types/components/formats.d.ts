@@ -1,1 +1,14 @@
-export type Formats = 'xml' | 'a/n' | 'binary' | 'grib' | 'bufr' | 'json' | 'shift-jis' | 'jis';
+export type DataFormats = 'xml' | 'a/n' | 'binary' | 'grib' | 'bufr' | 'json' | 'shift-jis' | 'jis';
+export type JmaFileFormat =
+  'xml'
+  | 'grib2'
+  | 'bufr3'
+  | 'bufr4'
+  | 'bpf'
+  | 'shp'
+  | 'shx'
+  | 'pdf'
+  | 'png'
+  | 'jpeg'
+  | 'gif'
+  | 'concat';

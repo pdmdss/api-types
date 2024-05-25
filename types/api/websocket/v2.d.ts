@@ -1,22 +1,10 @@
 import { Components } from '../../components';
 
-type DataFormat = Components.Formats | null;
+type DataFormat = Components.DataFormats | null;
 type DataCompression = 'gzip' | 'zip' | null;
 type DataEncoding = 'base64' | 'utf-8' | null;
 
-type JmaFileFormat =
-  'xml'
-  | 'grib2'
-  | 'bufr3'
-  | 'bufr4'
-  | 'bpf'
-  | 'shp'
-  | 'shx'
-  | 'pdf'
-  | 'png'
-  | 'jpeg'
-  | 'gif'
-  | null;
+type JmaFileFormat = Components.JmaFileFormat | null;
 type JmaFileCompression = 'gzip' | 'zip' | null;
 
 interface DataPassing {

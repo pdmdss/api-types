@@ -2,7 +2,7 @@ import { Apikey } from './apikey';
 import { Classification } from './classification';
 import { Earthquake } from './earthquake';
 import { Eew } from './eew';
-import { Formats } from './formats';
+import { DataFormats, JmaFileFormat } from './formats';
 import { Telegram } from './telegram';
 import { XmlReport } from './xml.report';
 
@@ -12,7 +12,8 @@ export namespace Components {
     Classification,
     Earthquake,
     Eew,
-    Formats,
+    DataFormats,
+    JmaFileFormat,
     Telegram,
     XmlReport
   };

@@ -1,6 +1,6 @@
 import { Classification } from './classification';
 import { XmlReport } from './xml.report';
-import { Formats } from './formats';
+import { DataFormats } from './formats';
 
 export namespace Telegram {
   interface Item {
@@ -17,7 +17,7 @@ export namespace Telegram {
     };
     receivedTime: string;
     xmlReport?: XmlReport;
-    format: Formats;
+    format: DataFormats;
     schema?: {
       type: string;
       version: string;
