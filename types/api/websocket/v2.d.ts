@@ -38,7 +38,7 @@ interface JmaFileHead {
   flags: {
     product: 'T' | 'A' | 'W' | 'Z';
     productIdentifier?: string;
-    originator: 'C' | 'J';
+    oflag: 'C' | 'J';
   };
   length: number;
 }
