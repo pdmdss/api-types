@@ -6,6 +6,7 @@ import { ApikeyDelete } from './apikey/delete';
 import { ApikeyGet } from './apikey/get';
 import { ApikeyList } from './apikey/list';
 import { ApikeyUpdate } from './apikey/update';
+import { ArchiveList } from './archive/list';
 import { BillingGet } from './billing/get';
 import { BillingList } from './billing/list';
 import { ChargeCard3d } from './charge/card.3d';
@@ -54,6 +55,7 @@ export namespace APITypes {
     ApikeyGet,
     ApikeyList,
     ApikeyUpdate,
+    ArchiveList,
     BillingGet,
     BillingList,
     ChargeCard3d,
