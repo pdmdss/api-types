@@ -12,8 +12,9 @@ export namespace Classification {
   export type TelegramValues = Telegram[keyof Telegram];
 
   export type EEW = {
-    Forecast: 'eew.forecast',
-    Warning: 'eew.warning'
+    Forecast: 'eew.forecast';
+    Warning: 'eew.warning';
+    Realtime: 'eew.realtime';
   };
 
   export type EEWValues = EEW[keyof EEW];
