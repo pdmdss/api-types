@@ -7,7 +7,8 @@ export namespace TelegramList {
 
   export interface QueryParams {
     limit?: number;
-    type?: string | string[];
+    type?: string;
+    classification?: string;
     xmlReport?: 'true' | 'false';
     test?: 'including' | 'no' | 'only';
     formatMode?: 'raw' | 'json';
