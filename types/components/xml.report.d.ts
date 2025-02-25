@@ -9,7 +9,7 @@ export interface XmlReport {
   head: {
     title: string;
     reportDateTime: string;
-    targetDateTime: string;
+    targetDateTime: string | null;
     targetDateTimeDubious?: string;
     targetDuration?: string;
     validDateTime?: string;
