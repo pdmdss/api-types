@@ -7,13 +7,14 @@ export namespace JmaFileList {
 
   export interface QueryParams {
     limit?: number;
-    type?: string | string[];
+    type?: string;
+    classification?: string;
     datetime?: string;
     cursorToken?: string;
   }
 
-  export type HeaderValue1 = 'ICE' | 'MET' | 'MSG' | 'NOWC' | 'OBS' | 'OCN' | 'RDR' | 'SRF' | 'TID' | 'WAV';
-  export type HeaderValue2 = 'AMDS' | 'AMDSCC' | 'AMDSRR' | 'CHT' | 'GPV' | 'INF' | 'SAT' | 'SEQ';
+  export type HeaderValue1 = 'ICE' | 'MET' | 'MSG' | 'NOWC' | 'OBS' | 'OCN' | 'RDR' | 'SRF' | 'TID' | 'WAV' | 'FLA' | 'WPR';
+  export type HeaderValue2 = 'AMDS' | 'AMDSCC' | 'AMDSRR' | 'SURF' | 'CHT' | 'GPV' | 'INF' | 'SAT' | 'SEQ';
 
   export interface Header {
     filename: string;
