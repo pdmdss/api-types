@@ -84,7 +84,7 @@ declare namespace Event {
     passing: DataPassing[];
     heads: JmaFileHead[];
     compression: JmaFileCompression;
-    sendMode: 'binary';
+    sendMode?: 'binary';
     length: number;
   }
 
