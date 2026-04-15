@@ -18,6 +18,7 @@ export namespace SocketList {
     ticket: string | null;
     classifications: (Components.Classification.Values | string)[];
     test: 'including' | 'no';
+    formats: ('xml' | 'json' | 'binary' | 'a/n')[];
     types: string[] | null;
     start: string;
     end: string | null;
