@@ -14,6 +14,7 @@ export namespace SocketStart {
     test?: 'including' | 'no';
     appName?: string;
     formatMode?: 'raw' | 'json';
+    formats?: ('xml' | 'binary' | 'a/n')[] | ('json' | 'binary' | 'a/n')[];
     sandboxId?: string;
   }
 
